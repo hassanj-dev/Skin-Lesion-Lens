@@ -29,8 +29,8 @@ MODEL_PATH = next((HERE / n for n in ("final_model.keras", "skin_lesion_model.ke
 CLASSES_PATH = HERE / "class_names.json"
 IMG_SIZE = (224, 224)
 
-st.set_page_config(page_title="Skin Lesion Classifier", page_icon="🩺", layout="wide", initial_sidebar_state="collapsed")
-
+st.set_page_config(page_title="Skin Lesion Classifier", page_icon=str(HERE / "favicon.png"),
+                   layout="wide", initial_sidebar_state="collapsed")
 
 # ------------------------------------------------------------------ model
 @st.cache_resource(show_spinner="Loading model...")
